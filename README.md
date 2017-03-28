@@ -1,1 +1,3 @@
-# Esri-Building-Drag-Sample
+# Building Interaction Sample
+
+![./demo.gif]()
