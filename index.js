@@ -208,6 +208,7 @@ require([
 
                     // Reassociate this drag function with the sceneview drag event.
                     _view.on("drag", _ondrag);
+                    _view.on("double-click", _ondoubleclick);
 
                     // Recreate all building floor graphics.
                     loadAll();
@@ -215,8 +216,15 @@ require([
             }
         };
 
+        var _ondoubleclick = function (e) {
+            e.stopPropagation();
+            console.log("screen point", e.x, e.y);
+            console.log("map point", e.mapPoint.x, e.mapPoint.y);
+        }
+
         // Define function to call when the drag event is fired.
         _view.on("drag", _ondrag);
+        _view.on("double-click", _ondoubleclick);
 
         // 
         function loadAll() {
@@ -301,4 +309,5 @@ require([
                 })
             );
         }
-    });
+    }
+);
