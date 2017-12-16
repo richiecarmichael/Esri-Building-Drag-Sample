@@ -225,6 +225,20 @@ require([
         // Define function to call when the drag event is fired.
         _view.on("drag", _ondrag);
         _view.on("double-click", _ondoubleclick);
+        //_view.on("click", function (e) {
+        //    // Stop propogation.
+        //    e.stopPropagation();
+
+        //    // Perform hittest to get clicked building (if any).
+        //    _view.hitTest(e.screenPoint).then(function (p) {
+        //        if (!p || !p.results || p.results.length === 0) { return; }
+        //        var graphic = p.results[0].graphic;
+        //        if (!graphic) { return; }
+
+        //        // Popup name of clicked building.
+        //        alert(graphic.attributes.name);
+        //    });
+        //});
 
         // 
         function loadAll() {
